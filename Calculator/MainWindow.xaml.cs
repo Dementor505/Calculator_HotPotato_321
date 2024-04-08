@@ -58,7 +58,7 @@ namespace Calculator
             ImageBehavior.SetAnimatedSource(buttonImage, null);
             buttonImage.Source = new BitmapImage(new Uri("/Resources/NumberTile.png", UriKind.Relative));
         }
-
+        
         private void Equalse_Click(object sender, RoutedEventArgs e)
         {
             try
