@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Calculator.Components;
-
+using kalk;
 using WpfAnimatedGif;
 
 namespace Calculator
@@ -64,7 +64,10 @@ namespace Calculator
             try
             {
                 Calculate clc = new Calculate();
+                string mathOperation = resultField.Text.ToString();
                 resultField.Text = clc.ConvertToMath(resultField.Text).ToString();
+                TxtStorage.AddNewLine(mathOperation + " = " + resultField.Text);
+                
             }
             catch
             {
